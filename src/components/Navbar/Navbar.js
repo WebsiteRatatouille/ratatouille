@@ -1,15 +1,17 @@
-import React from "react";
-import "../styles/Navbar.css";
+import React, { useState } from "react";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Logo from "../assets/img/ratatouille-original.png";
-import Profile from "../assets/img/ratatouille-icon.png";
+import Logo from "../../assets/img/ratatouille-original.png";
+import Profile from "../../assets/img/ratatouille-icon.png";
 
 function Navbar() {
+    const [menu, setMenu] = useState("home");
+
     return (
         <header>
             <nav className="navbar navbar-expand-lg header-nav">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/home">
+                    <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="Logo" />
                     </Link>
 
@@ -19,28 +21,29 @@ function Navbar() {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <Link className="nav-link active" aria-current="page" to="/home">
+                            <Link onClick={() => setMenu("home")} className={menu === "home" ? "nav-link active" : "nav-link"} to="/">
                                 Home
                             </Link>
-                            <Link className="nav-link" to="/recipes">
-                                Recipe
+                            <Link onClick={() => setMenu("recipes")} className={menu === "recipes" ? "nav-link active" : "nav-link"} to="/recipes">
+                                Recipes
                             </Link>
-                            <Link className="nav-link" to="/blog">
+                            <Link onClick={() => setMenu("blog")} className={menu === "blog" ? "nav-link active" : "nav-link"} to="/blog">
                                 Blog
                             </Link>
-                            <Link className="nav-link" to="/contact">
+                            <Link onClick={() => setMenu("contact")} className={menu === "contact" ? "nav-link active" : "nav-link"} to="/contact">
                                 Contact
                             </Link>
-                            <Link className="nav-link" to="/aboutUs">
+                            <Link onClick={() => setMenu("aboutUs")} className={menu === "aboutUs" ? "nav-link active" : "nav-link"} to="/aboutUs">
                                 About us
                             </Link>
                         </ul>
                     </div>
                     {/* <!-- Profile --> */}
                     <div className="profile">
-                        <img src={Profile} alt="Remy" />
+                        {/* <img src={Profile} alt="Remy" />
                         <span>Remy</span>
-                        <i className="bx bx-caret-down"></i>
+                        <i className="bx bx-caret-down"></i> */}
+                        <button>Sign In</button>
                     </div>
                 </div>
             </nav>

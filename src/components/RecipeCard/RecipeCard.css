@@ -1,0 +1,31 @@
+@import url(../../variables.css);
+
+.card {
+    height: 300px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-body {
+    height: 100px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}

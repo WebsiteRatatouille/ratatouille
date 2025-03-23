@@ -1,12 +1,4 @@
-:root {
-    --bg-header-color: #e4e2dd;
-    --text-color: #1a2428;
-    --gray-color: #4a4a48;
-    --bg-color: #fff;
-    --swiper-text-color: #fff;
-    --separator-color: #bfbfbf;
-    --max-width-website: 85%;
-}
+@import url(../../variables.css);
 
 header {
     width: 100%;
@@ -62,7 +54,7 @@ header {
     transition: background 0.5s;
 }
 
-.profile {
+/* .profile {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
@@ -80,4 +72,20 @@ header {
     font-family: "Times New Roman", Times, serif;
     font-size: 15px;
     font-weight: 500;
+} */
+
+.profile button {
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--gray-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 50px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.profile button:hover {
+    background-color: var(--gray-color);
+    color: white;
+    transition: 0.3s;
 }

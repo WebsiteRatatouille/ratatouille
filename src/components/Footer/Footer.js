@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/Footer.css";
+import "./Footer.css";
 import { Link } from "react-router-dom";
-import Logo from "../assets/img/ratatouille-original.png";
+import Logo from "../../assets/img/ratatouille-original.png";
 
 function Footer() {
     return (
