@@ -1,0 +1,108 @@
+/* CSS cho trang Recipes */
+.recipes-page {
+  text-align: center;
+}
+
+.recipes-header {
+  background-color: #4a4a48; /* Main colour */
+  color: white;
+  padding: 50px 0; /* Khoảng cách trên và dưới */
+  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+}
+
+.recipes-header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.recipes-header p {
+  font-size: 20px;
+  margin: 10px 0 0 0;
+}
+/* Searchbar */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.search-input {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+/* End Searchbar */
+
+/* Top rate */
+.top-rated-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.top-rated-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4a4a48;
+}
+
+.top-rated-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.recipe-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.recipe-rating {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.view-all-button {
+  background-color: #4a4a48;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.view-all-button:hover {
+  background-color: #6b6b67;
+}
+/* End top rate */
+
+/* Size img */
+.recipe-card img {
+  width: 100%; /* Hoặc kích thước cố định như width: 300px */
+  height: auto;
+  object-fit: cover; /* Điều chỉnh hiển thị ảnh */
+}

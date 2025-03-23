@@ -1,15 +1,12 @@
 import React from "react";
-import "../styles/Recipes.css";
+import "./Recipes.css";
 
-{
-  /* Top rate */
-}
 const topRatedRecipes = [
   {
     title: "The Best Soft Chocolate Chip Cookies",
     rating: 4.9,
     reviews: 1683,
-    image: "src/assets/img/chocolate-chip-cookies.jpg", // Đường dẫn tới ảnh
+    image: "img/chocolate-chip-cookies.jpg", // Đường dẫn tới ảnh
   },
   {
     title: "The Best Sunday Chili",
@@ -60,28 +57,14 @@ const topRatedRecipes = [
     image: "img/blueberry-pancakes.jpg",
   },
 ];
-{
-  /* End Top rate */
-}
 
-function Recipes() {
+const Recipes = () => {
   return (
     <div className="recipes-page">
-      <div className="recipes-header">
-        <h1>Recipes</h1>
-        <p>Welcome to Recipes !</p>
-      </div>
-      {/* Add Searchbar */}
-      <form className="search-form">
-        <input
-          type="text"
-          placeholder="Search by keyword"
-          className="search-input"
-        />
-      </form>
-      {/* End Searchbar */}
+      <h1 className="recipes-title">Recipes</h1>
+      <p className="recipes-description">Welcome to Recipes!</p>
 
-      {/* Top Rated Recipes */}
+      {/* Phần Top Rated Recipes */}
       <div className="top-rated-section">
         <h2 className="top-rated-title">Top Rated Recipes</h2>
         <p className="top-rated-description">
@@ -105,11 +88,8 @@ function Recipes() {
         </div>
         <button className="view-all-button">+ View All Recipes</button>
       </div>
-      {/* End Top rate */}
-
-      <div className="recipe-content">{/* Nội dung khác của trang */}</div>
     </div>
   );
-}
+};
 
 export default Recipes;
