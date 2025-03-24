@@ -15,18 +15,16 @@ function Trending() {
     ];
 
     return (
-        <div>
-            <div className="trending-wrapper">
-                <div className="trending-title">
-                    <h2>Xu hướng</h2>
-                </div>
+        <div className="trending-wrapper">
+            <div className="trending-title">
+                <h2>Xu hướng</h2>
+            </div>
 
-                <div className="card-container">
-                    <div className="row row-cols-1 row-cols-md-4 g-4">
-                        {trendingRecipes.map((recipe, index) => (
-                            <RecipeCard key={index} title={recipe.title} image={recipe.image} link={recipe.link} />
-                        ))}
-                    </div>
+            <div className="card-container">
+                <div className="row row-cols-1 row-cols-md-4 g-4">
+                    {trendingRecipes.map((recipe, index) => (
+                        <RecipeCard key={index} title={recipe.title} image={recipe.image} link={recipe.link} />
+                    ))}
                 </div>
             </div>
         </div>

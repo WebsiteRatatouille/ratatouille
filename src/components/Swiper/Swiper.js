@@ -1,73 +1,90 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Swiper.css";
 
-import "swiper/css";
-import "swiper/css/navigation";
+import Slide from "../Slide/Slide";
 
 import Slide1 from "../../assets/img/slide1.webp";
 import Slide2 from "../../assets/img/slide2.webp";
 import Slide3 from "../../assets/img/slide3.webp";
 
 function Swiper() {
+    const swiperSlides = [
+        {
+            image: Slide1,
+            title: "hiasd",
+            subtitle: "asd",
+            description: "sadd",
+            link: "#",
+        },
+
+        {
+            image: Slide2,
+            title: "hiasd",
+            subtitle: "asd",
+            description: "sadd",
+            link: "#",
+        },
+
+        {
+            image: Slide3,
+            title: "hiasd",
+            subtitle: "asd",
+            description: "sadd",
+            link: "#",
+        },
+    ];
+
     return (
-        // <!-- Home Swiper-->
-        <section class="swiper">
-            <div class="swiper-wrapper">
-                {/* <!-- Slide 1 --> */}
-                <div class="swiper-slide slide-container">
-                    <div class="home-text">
-                        <span>Foods of the day</span>
-                        <h1>Cơm sốt cà ri</h1>
-                        <p>Cơm sốt cà ri là món ăn thơm ngon với cơm trắng dẻo kết hợp cùng sốt cà ri đậm đà, béo nhẹ. Sốt được nấu từ thịt, khoai tây, cà rốt và gia vị đặc trưng, tạo nên hương vị cay nhẹ, hấp dẫn</p>
-                        <p>Thời gian nấu: 20 phút</p>
-                        <Link to="#">
-                            <button type="button" class="btn btn-light btn-check-now">
-                                Check now <i class="bx bx-right-arrow-alt"></i>
-                            </button>
-                        </Link>
-                    </div>
-
-                    <img src={Slide1} alt="Slide 1" />
+        <div className="swiper-wrapper">
+            <div
+                id="carouselExampleAutoplaying"
+                className="carousel slide"
+                data-bs-ride="carousel"
+            >
+                <div className="carousel-inner">
+                    {swiperSlides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`carousel-item ${
+                                index === 0 ? "active" : ""
+                            }`}
+                        >
+                            <Slide
+                                image={slide.image}
+                                title={slide.title}
+                                subtitle={slide.subtitle}
+                                description={slide.description}
+                                link={slide.link}
+                            />
+                        </div>
+                    ))}
                 </div>
-
-                {/* <!-- Slide 2 --> */}
-                <div class="swiper-slide slide-container">
-                    <div class="home-text">
-                        <span>Foods of the day</span>
-                        <h1>Gumbo hải sản</h1>
-                        <p>Gumbo hải sản là món súp đậm đà của ẩm thực Louisiana, kết hợp tôm, xúc xích, rau củ và gia vị Cajun đặc trưng. Nước dùng sánh mịn, thơm lừng, thấm đẫm hương vị cay nồng và ngọt tự nhiên từ hải sản.</p>
-                        <p>Thời gian nấu: 1 tiếng</p>
-                        <Link to="#">
-                            <button type="button" class="btn btn-light btn-check-now">
-                                Check now <i class="bx bx-right-arrow-alt"></i>
-                            </button>
-                        </Link>
-                    </div>
-                    <img src={Slide2} alt="Slide 2" />
-                </div>
-
-                {/* <!-- Slide 3 --> */}
-                <div class="swiper-slide slide-container">
-                    <div class="home-text">
-                        <span>Foods of the day</span>
-                        <h1>Bánh sừng bò nhân kem</h1>
-                        <p>Bánh sừng bò nhân kem là món bánh ngọt thơm ngon với lớp vỏ bơ giòn rụm và nhân kem mịn màng, béo ngậy bên trong. Khi cắn vào, lớp vỏ xốp tan hòa quyện cùng vị ngọt dịu của kem, tạo nên trải nghiệm ẩm thực hấp dẫn.</p>
-                        <p>Thời gian nấu: 2 tiếng</p>
-                        <Link to="#">
-                            <button type="button" class="btn btn-light btn-check-now">
-                                Check now <i class="bx bx-right-arrow-alt"></i>
-                            </button>
-                        </Link>
-                    </div>
-                    <img src={Slide3} alt="Slide 3" />
-                </div>
+                <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next"
+                >
+                    <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </section>
+        </div>
     );
 }
 
