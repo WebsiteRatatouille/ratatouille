@@ -1,7 +1,23 @@
+.slide-container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 130px;
+
+    background: url(../../assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
 .slide-container img {
     width: 100%;
     max-width: 600px;
-    height: auto;
+    height: 400px;
     object-fit: cover;
     border-radius: 5%;
 }
@@ -15,4 +31,9 @@
 
 .home-text span {
     font-style: italic;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
 }

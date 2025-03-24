@@ -9,10 +9,26 @@ import RecipeCard from "../RecipeCard/RecipeCard";
 
 function Explore() {
     const exploreRecipes = [
-        { image: ExploreRecipeImage1, title: "Bánh waffle siro bơ", link: "#" },
-        { image: ExploreRecipeImage2, title: "Bò hầm kiểu Pháp", link: "#" },
-        { image: ExploreRecipeImage3, title: "Bánh táo Crumble", link: "#" },
-        { image: ExploreRecipeImage4, title: "Chocolate Mousse", link: "#" },
+        {
+            image: ExploreRecipeImage1,
+            title: "Bánh waffle siro bơ",
+            link: "#",
+        },
+        {
+            image: ExploreRecipeImage2,
+            title: "Bò hầm kiểu Pháp",
+            link: "#",
+        },
+        {
+            image: ExploreRecipeImage3,
+            title: "Bánh táo Crumble",
+            link: "#",
+        },
+        {
+            image: ExploreRecipeImage4,
+            title: "Chocolate Mousse",
+            link: "#",
+        },
     ];
 
     return (
@@ -24,7 +40,12 @@ function Explore() {
             <div className="card-container">
                 <div className="row row-cols-1 row-cols-md-4 g-4">
                     {exploreRecipes.map((recipe, index) => (
-                        <RecipeCard key={index} title={recipe.title} image={recipe.image} link={recipe.link} />
+                        <RecipeCard
+                            key={index}
+                            title={recipe.title}
+                            image={recipe.image}
+                            link={recipe.link}
+                        />
                     ))}
                 </div>
             </div>

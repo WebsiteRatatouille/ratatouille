@@ -1,1 +1,7 @@
 @import url(../../variables.css);
+
+.contact {
+    margin: 35px;
+    max-width: var(--max-width-website);
+    padding: 0;
+}
