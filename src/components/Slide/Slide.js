@@ -14,7 +14,7 @@ function Slide({ image, title, subtitle, description, link }) {
     return (
         <div className="slide-container">
             <div class="home-text">
-                <span>Foods of the day</span>
+                <span>Công thức đặc biệt trong ngày</span>
                 <h1>{title}</h1>
                 <p>{description}</p>
                 <p>{subtitle}</p>
@@ -23,8 +23,7 @@ function Slide({ image, title, subtitle, description, link }) {
                         type="button"
                         class="btn btn-light btn-check-now"
                     >
-                        Check now
-                        <i class="bx bx-right-arrow-alt"></i>
+                        Xem ngay
                     </button>
                 </Link>
             </div>

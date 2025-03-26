@@ -32,7 +32,7 @@ function Explore() {
     ];
 
     return (
-        <div className="explore-more-wrapper">
+        <div className="explore-more-wrapper" id="explore-more">
             <div className="explore-more-title">
                 <h2>Khám phá thêm</h2>
             </div>

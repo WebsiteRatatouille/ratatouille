@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/ratatouille-original.png";
 import Profile from "../../assets/img/ratatouille-icon.png";
+import { MenuContext } from "../../context/MenuContext";
 
-function Navbar() {
-    const [menu, setMenu] = useState("home");
+function Navbar({ setShowLogin }) {
+    const { menu, setMenu } = useContext(MenuContext);
 
     return (
         <header>
@@ -94,7 +95,9 @@ function Navbar() {
                         {/* <img src={Profile} alt="Remy" />
                         <span>Remy</span>
                         <i className="bx bx-caret-down"></i> */}
-                        <button>Đăng nhập</button>
+                        <button onClick={() => setShowLogin(true)}>
+                            Đăng nhập
+                        </button>
                     </div>
                 </div>
             </nav>

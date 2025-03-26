@@ -15,7 +15,10 @@ function FeatureCollection() {
         link: "#",
     };
     return (
-        <div className="feature-collection-wrapper">
+        <div
+            className="feature-collection-wrapper"
+            id="feature-collection"
+        >
             <BigCollectionCard
                 image={featureCollectionRecipe.image}
                 title={featureCollectionRecipe.title}

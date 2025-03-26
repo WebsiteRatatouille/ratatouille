@@ -19,35 +19,39 @@ function BigSwiper() {
     const bigSwiperSlides = [
         {
             image: Slide1,
-            title: "aksdjasd",
-            subtitle: "asdasd",
-            description: "asdasd",
+            title: "Cơm sốt cà ri",
+            description:
+                "Cơm sốt cà ri là món ăn thơm ngon với cơm trắng dẻo kết hợp cùng sốt cà ri đậm đà, béo nhẹ. Sốt được nấu từ thịt, khoai tây, cà rốt và gia vị đặc trưng, tạo nên hương vị cay nhẹ, hấp dẫn",
+            subtitle: "Thời gian nấu: 20 phút",
             link: "#",
         },
 
         {
             image: Slide2,
-            title: "aksdjasd",
-            subtitle: "asdasd",
-            description: "asdasd",
+            title: "Gumbo hải sản",
+            description:
+                "Gumbo hải sản là món súp đậm đà của ẩm thực Louisiana, kết hợp tôm, xúc xích, rau củ và gia vị Cajun đặc trưng. Nước dùng sánh mịn, thơm lừng, thấm đẫm hương vị cay nồng và ngọt tự nhiên từ hải sản",
+
+            subtitle: "Thời gian nấu: 1 tiếng",
             link: "#",
         },
 
         {
             image: Slide3,
-            title: "aksdjasd",
-            subtitle: "asdasd",
-            description: "asdasd",
+            title: "Bánh sừng bò nhân kem",
+            description:
+                "Bánh sừng bò nhân kem là món bánh ngọt thơm ngon với lớp vỏ bơ giòn rụm và nhân kem mịn màng, béo ngậy bên trong. Khi cắn vào, lớp vỏ xốp tan hòa quyện cùng vị ngọt dịu của kem, tạo nên trải nghiệm ẩm thực hấp dẫn",
+            subtitle: "Thời gian nấu: 2 tiếng",
             link: "#",
         },
     ];
     return (
-        <div>
+        <div className="big-swiper-wrapper" id="big-swiper">
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
                 pagination={{

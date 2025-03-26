@@ -80,7 +80,7 @@ function FanFavorite() {
     ];
 
     return (
-        <div className="fan-favorite-wrapper">
+        <div className="fan-favorite-wrapper" id="fan-favorite">
             <div className="fan-favorite-title">
                 <h2>Công thức ưu thích</h2>
             </div>
