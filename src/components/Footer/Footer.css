@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-footer {
+.footer {
     background-color: var(--bg-header-color);
     padding-top: 70px;
     padding-bottom: 0px;
@@ -70,11 +70,11 @@ footer {
     padding-left: 10px;
 }
 
-.social-icon {
+.footer-col .social-icon {
     display: flex;
 }
 
-.social-icon a {
+.footer-col .social-icon a {
     text-decoration: none;
     padding-bottom: 10px;
     padding-left: 12px;
@@ -85,18 +85,18 @@ footer {
     border-radius: 50%;
 }
 
-.social-icon a i {
+.footer-col .social-icon a i {
     font-size: 20px;
     color: var(--gray-color);
     opacity: 0.9;
 }
 
-.social-icon a:hover {
+.footer-col .social-icon a:hover {
     background-color: var(--gray-color);
     transition: 0.5s;
 }
 
-.social-icon a:hover i {
+.footer-col .social-icon a:hover i {
     color: white;
     transition: 0.5s;
 }
