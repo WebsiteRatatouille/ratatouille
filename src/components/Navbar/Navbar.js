@@ -12,7 +12,11 @@ function Navbar({ setShowLogin }) {
         <header>
             <nav className="navbar navbar-expand-lg header-nav">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">
+                    <Link
+                        onClick={() => setMenu("home")}
+                        className="navbar-brand"
+                        to="/"
+                    >
                         <img src={Logo} alt="Logo" />
                     </Link>
 

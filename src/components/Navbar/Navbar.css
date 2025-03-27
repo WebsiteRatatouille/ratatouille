@@ -4,7 +4,7 @@ header {
     width: 100%;
     /* position: fixed; */
     background-color: var(--bg-header-color);
-    z-index: 10001;
+    z-index: 1;
 }
 
 .navbar-brand img {
@@ -15,6 +15,7 @@ header {
     background-color: var(--bg-header-color) !important;
     padding: 0px !important;
     box-shadow: 0 8px 11px rgb(14 55 54 / 40%);
+    z-index: 1;
 }
 
 .container-fluid {

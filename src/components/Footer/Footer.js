@@ -117,7 +117,9 @@ function Footer() {
                                 <i className="bx bxl-youtube"></i>
                             </a>
                         </div>
-                        <img src={Logo} alt="Logo" />
+                        <Link onClick={() => setMenu("home")} to="/">
+                            <img src={Logo} alt="Logo" />
+                        </Link>
                     </div>
                 </div>
             </div>

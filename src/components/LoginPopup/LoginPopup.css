@@ -55,15 +55,15 @@
 
 .login-popup-inputs input {
     outline: none;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .login-popup-container button {
     border: none;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: var(--gray-color);
     font-size: 15px;
     color: white;

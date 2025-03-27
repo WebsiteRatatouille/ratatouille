@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginPopup.css";
 
 function LoginPopup({ setShowLogin }) {
     const [currState, setCurrState] = useState("Đăng nhập");
+
+    useEffect(() => {
+        // Disable scrolling
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            // Re-enable scrolling
+            document.body.style.overflow = "auto";
+        };
+    }, []);
+
     return (
         <div className="login-popup">
             <form className="login-popup-container">
