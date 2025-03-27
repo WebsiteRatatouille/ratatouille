@@ -1,6 +1,6 @@
 import React from "react";
 import "./DontMiss.css";
-import SmallCollectionCard from "../SmallCollectionCard/SmallCollectionCard";
+import SmallCollectionGrid from "../SmallCollectionGrid/SmallCollectionGrid";
 
 import Collection1 from "../../assets/img/dont-miss-1.webp";
 import Collection2 from "../../assets/img/dont-miss-2.webp";
@@ -30,19 +30,9 @@ function DontMiss() {
             <div className="dont-miss-title">
                 <h2>Đừng bỏ lỡ</h2>
             </div>
-
-            <div className="card-container">
-                <div className="row row-cols-1 row-cols-md-3 g-4">
-                    {dontMissCollections.map((collection, index) => (
-                        <SmallCollectionCard
-                            key={index}
-                            image={collection.image}
-                            title={collection.title}
-                            link={collection.link}
-                        />
-                    ))}
-                </div>
-            </div>
+            <SmallCollectionGrid
+                collectionList={dontMissCollections}
+            />
         </div>
     );
 }

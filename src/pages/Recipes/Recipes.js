@@ -1,5 +1,6 @@
 import React from "react";
 import "./Recipes.css";
+
 import RecipesPageBgImage from "../../assets/img/recipes-background.webp";
 
 function Recipes() {
@@ -11,6 +12,7 @@ function Recipes() {
                     alt="Recipes page background"
                 />
             </div>
+
             <div className="recipes-body-wrapper">
                 <div className="title">
                     <h1>Công thức & Ý tưởng nấu ăn</h1>

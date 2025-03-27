@@ -1,6 +1,7 @@
 import React from "react";
 import "./Trending.css";
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeGrid from "../RecipeGrid/RecipeGrid";
+
 import TrendingRecipeImage1 from "../../assets/img/trending-now.webp";
 import TrendingRecipeImage2 from "../../assets/img/trending-now-2.webp";
 import TrendingRecipeImage3 from "../../assets/img/trending-now-3.webp";
@@ -35,19 +36,7 @@ function Trending() {
             <div className="trending-title">
                 <h2>Xu hướng</h2>
             </div>
-
-            <div className="card-container">
-                <div className="row row-cols-1 row-cols-md-4 g-4">
-                    {trendingRecipes.map((recipe, index) => (
-                        <RecipeCard
-                            key={index}
-                            title={recipe.title}
-                            image={recipe.image}
-                            link={recipe.link}
-                        />
-                    ))}
-                </div>
-            </div>
+            <RecipeGrid recipeList={trendingRecipes} />
         </div>
     );
 }

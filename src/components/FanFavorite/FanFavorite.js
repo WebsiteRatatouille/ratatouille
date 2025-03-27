@@ -1,6 +1,6 @@
 import React from "react";
 import "./FanFavorite.css";
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeGrid from "../RecipeGrid/RecipeGrid";
 
 import FanFavoriteRecipeImage1 from "../../assets/img/fan-favorite-1.webp";
 import FanFavoriteRecipeImage2 from "../../assets/img/fan-favorite-2.webp";
@@ -84,19 +84,7 @@ function FanFavorite() {
             <div className="fan-favorite-title">
                 <h2>Công thức ưu thích</h2>
             </div>
-
-            <div className="card-container">
-                <div className="row row-cols-1 row-cols-md-4 g-4">
-                    {fanFavoriteRecipes.map((recipe, index) => (
-                        <RecipeCard
-                            key={index}
-                            title={recipe.title}
-                            image={recipe.image}
-                            link={recipe.link}
-                        />
-                    ))}
-                </div>
-            </div>
+            <RecipeGrid recipeList={fanFavoriteRecipes} />
         </div>
     );
 }
