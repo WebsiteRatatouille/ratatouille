@@ -36,9 +36,8 @@ header {
 }
 
 .nav-link {
-    text-transform: uppercase;
     font-family: "Times New Roman", Times, serif;
-    font-size: 1rem;
+    font-size: 17px !important;
     font-weight: 700;
     color: var(--text-color);
     padding: 0.5rem 1rem !important;

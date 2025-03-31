@@ -11,22 +11,22 @@ function Trending() {
     const trendingRecipes = [
         {
             image: TrendingRecipeImage1,
-            title: "Bánh waffle siro bơ",
+            name: "Bánh waffle siro bơ",
             link: "#",
         },
         {
             image: TrendingRecipeImage2,
-            title: "Bò hầm kiểu Pháp",
+            name: "Bò hầm kiểu Pháp",
             link: "#",
         },
         {
             image: TrendingRecipeImage3,
-            title: "Bánh táo Crumble",
+            name: "Bánh táo Crumble",
             link: "#",
         },
         {
             image: TrendingRecipeImage4,
-            title: "Chocolate Mousse",
+            name: "Chocolate Mousse",
             link: "#",
         },
     ];

@@ -19,62 +19,62 @@ function FanFavorite() {
     const fanFavoriteRecipes = [
         {
             image: FanFavoriteRecipeImage1,
-            title: "Sườn nướng lò",
+            name: "Sườn nướng lò",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage2,
-            title: "Thanh phô mai Mozzarella",
+            name: "Thanh phô mai Mozzarella",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage3,
-            title: "Bánh pancake thuần chay 5 phút",
+            name: "Bánh pancake thuần chay 5 phút",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage4,
-            title: "Shakshuka",
+            name: "Shakshuka",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage5,
-            title: "Sốt Teriyaki Nhà Hàng",
+            name: "Sốt Teriyaki Nhà Hàng",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage6,
-            title: "Chili Skylike - Phiên Bản Mô Phỏng Skyline Chili",
+            name: "Chili Skylike - Phiên Bản Mô Phỏng Skyline Chili",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage7,
-            title: "Bánh Chuối Hạt Thơm Ngon & Mềm Ẩm",
+            name: "Bánh Chuối Hạt Thơm Ngon & Mềm Ẩm",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage8,
-            title: "Món Ớt Chuông Đoạt Giải",
+            name: "Món Ớt Chuông Đoạt Giải",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage9,
-            title: "Mì pasta bông cải xanh và tỏi",
+            name: "Mì pasta bông cải xanh và tỏi",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage10,
-            title: "Cánh gà giòn lò nướng",
+            name: "Cánh gà giòn lò nướng",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage11,
-            title: "Nướng bít tết hoàn hảo",
+            name: "Nướng bít tết hoàn hảo",
             link: "#",
         },
         {
             image: FanFavoriteRecipeImage12,
-            title: "Bánh quế Bỉ ngon nhất",
+            name: "Bánh quế Bỉ ngon nhất",
             link: "#",
         },
     ];
