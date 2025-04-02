@@ -1,10 +1,13 @@
 import React from "react";
 import "./RecipeTag.css";
+import { Link } from "react-router-dom";
 
-function RecipeTag({ name }) {
+function RecipeTag({ name, link }) {
     return (
         <div className="recipe-tag-wrapper">
-            <h5 className="name">{name}</h5>
+            <Link className="nav-link" to={link}>
+                <h5 className="name">{name}</h5>
+            </Link>
         </div>
     );
 }

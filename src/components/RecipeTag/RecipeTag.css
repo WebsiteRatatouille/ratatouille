@@ -9,6 +9,9 @@
     cursor: pointer;
     border-radius: 3px;
 }
+.recipe-tag-wrapper .nav-link {
+    text-decoration: none;
+}
 
 .recipe-tag-wrapper .name {
     text-align: center;
@@ -20,5 +23,4 @@
 .recipe-tag-wrapper:hover {
     background-color: var(--gray-color);
     color: white;
-    transition: 0.2s;
 }

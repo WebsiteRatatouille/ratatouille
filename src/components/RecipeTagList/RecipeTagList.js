@@ -4,14 +4,14 @@ import RecipeTag from "../RecipeTag/RecipeTag";
 
 function RecipeTagList() {
     const RecipeTags = [
-        { name: "Bữa sáng" },
-        { name: "Bữa trưa" },
-        { name: "Bữa tối" },
-        { name: "Ăn nhẹ" },
-        { name: "Tráng miệng" },
-        { name: "Nước ép" },
-        { name: "Chế biến nhanh" },
-        { name: "Đồ chay" },
+        { name: "Bữa sáng", link: "#" },
+        { name: "Bữa trưa", link: "#" },
+        { name: "Bữa tối", link: "#" },
+        { name: "Ăn nhẹ", link: "#" },
+        { name: "Tráng miệng", link: "#" },
+        { name: "Nước ép", link: "#" },
+        { name: "Chế biến nhanh", link: "#" },
+        { name: "Đồ chay", link: "#" },
     ];
 
     return (
@@ -19,7 +19,7 @@ function RecipeTagList() {
             <h5 className="title">Khám phá</h5>
             <div className="recipe-tag-list">
                 {RecipeTags.map((item, index) => (
-                    <RecipeTag name={item.name} />
+                    <RecipeTag name={item.name} link={index.link} />
                 ))}
             </div>
         </div>

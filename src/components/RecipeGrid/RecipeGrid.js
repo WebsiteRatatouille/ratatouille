@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./RecipeGrid.css";
 
 import RecipeCard from "../RecipeCard/RecipeCard";
+import { RecipeMenuContext } from "../../context/RecipeMenuContext";
 
-function RecipeGrid({ recipeList, category = "All" }) {
-    const filteredRecipes =
-        category === "All"
-            ? recipeList
-            : recipeList.filter(
-                  (recipe) => recipe.category === category
-              );
+function RecipeGrid({ recipeList }) {
+    // console.log("recipeList", recipeList);
+
+    if (!Array.isArray(recipeList) || recipeList.length === 0) {
+        return <div>Không có dữ liệu để hiển thị</div>;
+    }
 
     return (
         <div className="recipe-grid-wrapper">
             <div className="card-container">
                 <div className="row row-cols-1 row-cols-md-4 g-4">
-                    {filteredRecipes.map((recipe, index) => (
+                    {recipeList.map((recipe, index) => (
                         <RecipeCard
                             key={index}
                             name={recipe.name}

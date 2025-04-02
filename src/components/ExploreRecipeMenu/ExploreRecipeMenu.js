@@ -1,11 +1,10 @@
 import React from "react";
 import "./ExploreRecipeMenu.css";
-import { menu_list } from "../../assets/frontend_assets/assets";
 
 import ExploreRecipeMenuList from "../ExploreRecipeMenuList/ExploreRecipeMenuList";
 import SmallLineSeparator from "../SmallLineSeparator/SmallLineSeparator";
 
-function ExploreRecipeMenu({ category, setCategory }) {
+function ExploreRecipeMenu({ category, setCategory, menu_list }) {
     return (
         <div className="explore-recipe-menu" id="explore-recipe-menu">
             <h2>Khám phá công thức</h2>

@@ -35,18 +35,18 @@ header {
     gap: 20px !important;
 }
 
-.nav-link {
+.navbar .nav-link {
     font-family: "Times New Roman", Times, serif;
     font-size: 17px !important;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: var(--text-color);
     padding: 0.5rem 1rem !important;
     text-decoration: none;
     border-radius: 5rem;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     border-radius: 5rem;
     background-color: var(--gray-color);
     color: var(--bg-color) !important;
