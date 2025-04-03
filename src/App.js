@@ -15,12 +15,14 @@ import {
     Route,
     Routes,
 } from "react-router-dom";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
     const [showLogin, setShowLogin] = useState(false);
     // console.log("app render");
     return (
         <>
+            <ProgressBar />
             {showLogin ? (
                 <LoginPopup setShowLogin={setShowLogin} />
             ) : (
@@ -28,6 +30,7 @@ function App() {
             )}
             <div className="App">
                 <Navbar setShowLogin={setShowLogin} />
+
                 <Routes>
                     <Route path="/" exact element={<Home />} />
                     <Route

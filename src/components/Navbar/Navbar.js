@@ -11,7 +11,7 @@ function Navbar({ setShowLogin }) {
     return (
         <header>
             <nav className="navbar navbar-expand-lg header-nav">
-                <div className="container-fluid">
+                <div className="container-fluid ">
                     <Link
                         onClick={() => setMenu("home")}
                         className="navbar-brand"
@@ -94,11 +94,7 @@ function Navbar({ setShowLogin }) {
                             </Link>
                         </ul>
                     </div>
-                    {/* <!-- Profile --> */}
                     <div className="profile">
-                        {/* <img src={Profile} alt="Remy" />
-                        <span>Remy</span>
-                        <i className="bx bx-caret-down"></i> */}
                         <button onClick={() => setShowLogin(true)}>
                             Đăng nhập
                         </button>

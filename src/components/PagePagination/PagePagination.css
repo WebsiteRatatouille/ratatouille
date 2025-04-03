@@ -1,6 +1,7 @@
 @import url("../../variables.css");
 
 .page-pagination-wrapper {
+    user-select: none;
     margin-top: 35px;
     display: flex;
     justify-content: center;
