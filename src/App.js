@@ -11,21 +11,23 @@ import Blog from "./pages/Blog/Blog";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
   // console.log("app render");
   return (
     <>
+      <ProgressBar />
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="App">
         <Navbar setShowLogin={setShowLogin} />
+
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/recipes" exact element={<Recipes />} />
           <Route path="/blog" exact element={<Blog />} />
           <Route path="/contact" exact element={<Contact />} />
-
           <Route path="/aboutUs" exact element={<AboutUs />} />
         </Routes>
         <Footer />

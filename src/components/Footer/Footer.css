@@ -7,6 +7,7 @@
 }
 
 .footer {
+    user-select: none;
     background-color: var(--bg-header-color);
     padding-top: 70px;
     padding-bottom: 0px;
