@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutUs.css";
 import Project from "../../components/Project/Project";
 import VisionMission from "../../components/VisionMission/VisionMission";
+import Features from "../../components/Features/Features";
 import Team from "../../components/Team/Team";
 
 const AboutUs = () => {
@@ -22,6 +23,7 @@ const AboutUs = () => {
       </div>
       <div className="about-content">
         <Project />
+        <Features />
         <VisionMission />
         <Team />
       </div>

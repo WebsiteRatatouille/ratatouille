@@ -1,77 +1,68 @@
-.vision-mission-container {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
+.vision-mission {
+  margin-top: 80px;
+  padding: 40px 0;
 }
 
-.vision-mission-content {
+.vm-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  padding: 0 20px;
 }
 
-.vision-section,
-.mission-section {
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+.vm-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.vision-section h2,
-.mission-section h2 {
-  color: #2c3e50;
+.vm-icon {
+  font-size: 3rem;
+  color: #ff6b6b;
+  margin-bottom: 25px;
+}
+
+.vm-card h2 {
+  color: #333;
   font-size: 2rem;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.vision-section p {
-  font-size: 1.1rem;
+.vm-card p {
+  color: #666;
   line-height: 1.8;
-  color: #555;
-  text-align: justify;
 }
 
-.mission-section ul {
+.mission-list {
   list-style: none;
   padding: 0;
 }
 
-.mission-section li {
-  padding: 15px 0;
-  font-size: 1.1rem;
-  color: #555;
-  position: relative;
+.mission-list li {
+  color: #666;
+  margin-bottom: 15px;
   padding-left: 25px;
-  border-bottom: 1px solid #eee;
+  position: relative;
+  line-height: 1.6;
 }
 
-.mission-section li:last-child {
-  border-bottom: none;
-}
-
-.mission-section li::before {
-  content: "→";
-  color: #e67e22;
+.mission-list li::before {
+  content: "•";
+  color: #ff6b6b;
+  font-size: 1.5rem;
   position: absolute;
   left: 0;
 }
 
 @media (max-width: 768px) {
-  .vision-mission-content {
+  .vm-container {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .vision-section h2,
-  .mission-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .vision-section p,
-  .mission-section li {
-    font-size: 1rem;
+  .vm-card {
+    padding: 30px;
   }
 }

@@ -15,15 +15,6 @@ const Project = () => {
             học hỏi và phát triển đam mê ẩm thực của mình.
           </p>
         </div>
-        <div className="project-features">
-          <h3>Các Tính Năng Chính</h3>
-          <ul>
-            <li>Thư viện công thức nấu ăn đa dạng</li>
-            <li>Hệ thống tìm kiếm và lọc thông minh</li>
-            <li>Blog chia sẻ kiến thức ẩm thực</li>
-            <li>Cộng đồng người dùng tương tác</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
