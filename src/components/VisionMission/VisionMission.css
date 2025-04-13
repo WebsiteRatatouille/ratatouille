@@ -1,0 +1,77 @@
+.vision-mission-container {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.vision-mission-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.vision-section,
+.mission-section {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vision-section h2,
+.mission-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.vision-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.mission-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-section li {
+  padding: 15px 0;
+  font-size: 1.1rem;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.mission-section li:last-child {
+  border-bottom: none;
+}
+
+.mission-section li::before {
+  content: "→";
+  color: #e67e22;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .vision-mission-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vision-section h2,
+  .mission-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .vision-section p,
+  .mission-section li {
+    font-size: 1rem;
+  }
+}
