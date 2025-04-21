@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import "./AboutUs.css";
-import Project from "../../components/Project/Project";
-import VisionMission from "../../components/VisionMission/VisionMission";
-import Features from "../../components/Features/Features";
-import Team from "../../components/Team/Team";
-import Achievements from "../../components/Achievements/Achievements";
+import Project from "../../../components/Project/Project";
+import VisionMission from "../../../components/VisionMission/VisionMission";
+import Features from "../../../components/Features/Features";
+import Team from "../../../components/Team/Team";
+import Achievements from "../../../components/Achievements/Achievements";
 import { Link } from "react-router-dom";
-import { MenuContext } from "../../context/MenuContext";
+import { MenuContext } from "../../../context/MenuContext";
 
 const AboutUs = () => {
     const { setMenu } = useContext(MenuContext);
