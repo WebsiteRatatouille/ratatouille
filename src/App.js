@@ -1,56 +1,43 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import UserLayout from "./layouts/UserLayout";
+import Home from "./pages/UserPages/Home/Home";
+import Recipes from "./pages/UserPages/Recipes/Recipes";
+import Contact from "./pages/UserPages/Contact/Contact";
+import AboutUs from "./pages/UserPages/AboutUs/AboutUs";
+import Blog from "./pages/UserPages/Blog/Blog";
 
-import Home from "./pages/Home/Home";
-import Recipes from "./pages/Recipes/Recipes";
-import Contact from "./pages/Contact/Contact";
-import AboutUs from "./pages/AboutUs/AboutUs";
-import Blog from "./pages/Blog/Blog";
+import AdminLayout from "./layouts/AdminLayout";
+import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
+
 import LoginPopup from "./components/LoginPopup/LoginPopup";
-
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-} from "react-router-dom";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
     const [showLogin, setShowLogin] = useState(false);
+    const user = JSON.parse(localStorage.getItem("user"));
     // console.log("app render");
     return (
         <>
             <ProgressBar />
-            {showLogin ? (
-                <LoginPopup setShowLogin={setShowLogin} />
-            ) : (
-                <></>
-            )}
-            <div className="App">
-                <Navbar setShowLogin={setShowLogin} />
+            {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
 
+            <div className="App">
                 <Routes>
-                    <Route path="/" exact element={<Home />} />
-                    <Route
-                        path="/recipes"
-                        exact
-                        element={<Recipes />}
-                    />
-                    <Route path="/blog" exact element={<Blog />} />
-                    <Route
-                        path="/contact"
-                        exact
-                        element={<Contact />}
-                    />
-                    <Route
-                        path="/aboutUs"
-                        exact
-                        element={<AboutUs />}
-                    />
+                    <Route element={<UserLayout setShowLogin={setShowLogin} />}>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/recipes" element={<Recipes />} />
+                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/aboutUs" element={<AboutUs />} />
+                    </Route>
+
+                    <Route element={user?.role === "admin" ? <AdminLayout /> : <Navigate to="/" />}>
+                        <Route path="/admin" element={<AdminDashboard />} />
+                    </Route>
                 </Routes>
-                <Footer />
             </div>
         </>
     );
