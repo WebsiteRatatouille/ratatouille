@@ -1,12 +1,9 @@
 import React, { useContext } from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/img/ratatouille-original.png";
-import { MenuContext } from "../../context/MenuContext";
 
 function Footer() {
-    const { menu, setMenu } = useContext(MenuContext);
-
     return (
         <footer className="footer" id="footer">
             <div className="container">
@@ -15,40 +12,24 @@ function Footer() {
                         <h4>Ratatouille</h4>
                         <ul>
                             <li>
-                                <Link
-                                    onClick={() => setMenu("aboutUs")}
-                                    className="footer-nav-link"
-                                    to="/aboutUs"
-                                >
+                                <NavLink className="footer-nav-link" to="/aboutUs">
                                     Về chúng tôi
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    onClick={() => setMenu("blog")}
-                                    className="footer-nav-link"
-                                    to="/blog"
-                                >
+                                <NavLink className="footer-nav-link" to="/blog">
                                     Blog
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    onClick={() => setMenu("recipes")}
-                                    className="footer-nav-link"
-                                    to="/recipes"
-                                >
+                                <NavLink className="footer-nav-link" to="/recipes">
                                     Mục lục công thức
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    onClick={() => setMenu("contact")}
-                                    className="footer-nav-link"
-                                    to="/contact"
-                                >
+                                <NavLink className="footer-nav-link" to="/contact">
                                     Liên hệ
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
@@ -57,36 +38,24 @@ function Footer() {
                         <h4>Món ăn & Công thức</h4>
                         <ul>
                             <li>
-                                <Link
-                                    className="footer-nav-link"
-                                    to="#"
-                                >
+                                <NavLink className="footer-nav-link" to="#">
                                     Nhanh & Dễ dàng
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    className="footer-nav-link"
-                                    to="#"
-                                >
+                                <NavLink className="footer-nav-link" to="#">
                                     Thuần chay
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    className="footer-nav-link"
-                                    to="#"
-                                >
+                                <NavLink className="footer-nav-link" to="#">
                                     Nấu súp
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                    className="footer-nav-link"
-                                    to="#"
-                                >
+                                <NavLink className="footer-nav-link" to="#">
                                     Đồ uống
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
@@ -102,32 +71,23 @@ function Footer() {
                             >
                                 <i className="bx bxl-facebook-circle"></i>
                             </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <a href="#" target="_blank" rel="noopener noreferrer">
                                 <i className="bx bxl-tiktok"></i>
                             </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <a href="#" target="_blank" rel="noopener noreferrer">
                                 <i className="bx bxl-youtube"></i>
                             </a>
                         </div>
-                        <Link onClick={() => setMenu("home")} to="/">
+                        <NavLink to="/">
                             <img src={Logo} alt="Logo" />
-                        </Link>
+                        </NavLink>
                     </div>
                 </div>
             </div>
 
             <div className="footer-bottom">
                 <p>
-                    Copyright &copy;2025; Designed by{" "}
-                    <span className="designer">Remy</span>
+                    Copyright &copy;2025; Designed by <span className="designer">Remy</span>
                 </p>
             </div>
         </footer>

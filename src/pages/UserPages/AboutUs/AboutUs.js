@@ -1,16 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./AboutUs.css";
 import Project from "../../../components/Project/Project";
 import VisionMission from "../../../components/VisionMission/VisionMission";
 import Features from "../../../components/Features/Features";
 import Team from "../../../components/Team/Team";
 import Achievements from "../../../components/Achievements/Achievements";
-import { Link } from "react-router-dom";
-import { MenuContext } from "../../../context/MenuContext";
+import { NavLink } from "react-router-dom";
 
 const AboutUs = () => {
-    const { setMenu } = useContext(MenuContext);
-
     return (
         <div className="about-container">
             <div className="about-us-header">
@@ -25,20 +22,12 @@ const AboutUs = () => {
                         mình.
                     </p>
                     <div className="cta-buttons">
-                        <Link
-                            to="/recipes"
-                            className="cta-button primary"
-                            onClick={() => setMenu("recipes")}
-                        >
+                        <NavLink to="/recipes" className="cta-button primary">
                             Khám phá công thức
-                        </Link>
-                        <Link
-                            to="/contact"
-                            className="cta-button primary"
-                            onClick={() => setMenu("contact")}
-                        >
+                        </NavLink>
+                        <NavLink to="/contact" className="cta-button primary">
                             Liên hệ với chúng tôi
-                        </Link>
+                        </NavLink>
                     </div>
                 </div>
             </div>
