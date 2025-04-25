@@ -20,7 +20,7 @@
     flex-wrap: wrap;
 }
 
-.footer-col {
+.footer .footer-col {
     flex: 1;
     width: 25%;
     padding: 0px 15px;
@@ -31,7 +31,7 @@
     padding: 0px;
 }
 
-.footer-col h4 {
+.footer .footer-col h4 {
     font-size: 18px;
     color: var(--gray-color);
     text-transform: capitalize;
@@ -40,7 +40,7 @@
     position: relative;
 }
 
-.footer-col h4::before {
+.footer .footer-col h4::before {
     content: "";
     position: absolute;
     left: 0;
@@ -52,11 +52,11 @@
     border-radius: 20px;
 }
 
-.footer-col ul li:not(:last-child) {
+.footer .footer-col ul li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.footer-col ul li .footer-nav-link {
+.footer .footer-col ul li .footer-nav-link {
     font-size: 16px;
     text-transform: capitalize;
     color: var(--gray-color);
@@ -66,16 +66,16 @@
     transition: all 0.3s ease;
 }
 
-.footer-col ul li .footer-nav-link:hover {
+.footer .footer-col ul li .footer-nav-link:hover {
     color: black;
     padding-left: 10px;
 }
 
-.footer-col .social-icon {
+.footer .footer-col .social-icon {
     display: flex;
 }
 
-.footer-col .social-icon a {
+.footer .footer-col .social-icon a {
     text-decoration: none;
     padding-bottom: 10px;
     padding-left: 12px;
@@ -86,48 +86,48 @@
     border-radius: 50%;
 }
 
-.footer-col .social-icon a i {
+.footer .footer-col .social-icon a i {
     font-size: 20px;
     color: var(--gray-color);
     opacity: 0.9;
 }
 
-.footer-col .social-icon a:hover {
+.footer .footer-col .social-icon a:hover {
     background-color: var(--gray-color);
     transition: 0.5s;
 }
 
-.footer-col .social-icon a:hover i {
+.footer .footer-col .social-icon a:hover i {
     color: white;
     transition: 0.5s;
 }
 
-.footer-col img {
+.footer .footer-col img {
     margin-top: 15px;
     width: 230px;
 }
 
-.footer-bottom {
+.footer .footer-bottom {
     background-color: var(--gray-color);
     text-align: center;
     margin-top: 70px;
     padding-bottom: 5px;
 }
 
-.footer-bottom p {
+.footer .footer-bottom p {
     padding-top: 20px;
     color: white;
 }
 
 @media (max-width: 750px) {
-    .footer-col {
+    .footer .footer-col {
         width: 50%;
         margin-bottom: 30px;
     }
 }
 
 @media (max-width: 574px) {
-    .footer-col {
+    .footer .footer-col {
         width: 100%;
     }
 }
