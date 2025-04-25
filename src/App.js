@@ -16,31 +16,35 @@ import LoginPopup from "./components/LoginPopup/LoginPopup";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
-    const [showLogin, setShowLogin] = useState(false);
-    const user = JSON.parse(localStorage.getItem("user"));
-    // console.log("app render");
-    return (
-        <>
-            <ProgressBar />
-            {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
+  const [showLogin, setShowLogin] = useState(false);
+  const user = JSON.parse(localStorage.getItem("user"));
+  // console.log("app render");
+  return (
+    <>
+      <ProgressBar />
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
 
-            <div className="App">
-                <Routes>
-                    <Route element={<UserLayout setShowLogin={setShowLogin} />}>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/recipes" element={<Recipes />} />
-                        <Route path="/blog" element={<Blog />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/aboutUs" element={<AboutUs />} />
-                    </Route>
+      <div className="App">
+        <Routes>
+          <Route element={<UserLayout setShowLogin={setShowLogin} />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/recipes" element={<Recipes />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+          </Route>
 
-                    <Route element={user?.role === "admin" ? <AdminLayout /> : <Navigate to="/" />}>
-                        <Route path="/admin" element={<AdminDashboard />} />
-                    </Route>
-                </Routes>
-            </div>
-        </>
-    );
+          <Route
+            element={
+              user?.role === "admin" ? <AdminLayout /> : <Navigate to="/" />
+            }
+          >
+            <Route path="/admin" element={<AdminDashboard />} />
+          </Route>
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App;
