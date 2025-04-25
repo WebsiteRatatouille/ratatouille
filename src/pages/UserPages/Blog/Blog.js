@@ -6,7 +6,7 @@ import imageBlog2 from "../../../assets/imgBlog/hanoi1.jpg";
 import imageBlog3 from "../../../assets/imgBlog/hanoi2.jpg";
 import videoBlog from "../../../assets/imgBlog/video1.mp4";
 import imagePopUp from "../../../assets/imgBlog/jerry.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Blog() {
     return (
@@ -32,21 +32,21 @@ function Blog() {
             </div>
             <div className="blog-container">
                 <div className="text-field-1">
-                    <Link className="dieu-huong" to="/">
+                    <NavLink className="dieu-huong" to="/">
                         HOME
-                    </Link>
+                    </NavLink>
                     <i class="bx bx-chevron-right"></i>
-                    <Link className="dieu-huong" to="/recipes">
+                    <NavLink className="dieu-huong" to="/recipes">
                         CÔNG THỨC
-                    </Link>
+                    </NavLink>
                     <i class="bx bx-chevron-right"></i>
-                    <Link className="dieu-huong" to="/contact">
+                    <NavLink className="dieu-huong" to="/contact">
                         LIÊN HỆ
-                    </Link>
+                    </NavLink>
                     <i class="bx bx-chevron-right"></i>
-                    <Link className="dieu-huong" to="/aboutUs">
+                    <NavLink className="dieu-huong" to="/aboutUs">
                         CHÚNG TÔI
-                    </Link>
+                    </NavLink>
                 </div>
                 <h1 className="title">RATATOUILLE</h1>
                 <div className="author-info">
